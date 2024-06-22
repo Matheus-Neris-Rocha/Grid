@@ -1,0 +1,64 @@
+<style>
+    body {
+        margin: 0;
+    }
+
+    #app > * {
+        border: 1px solid red;
+    }
+
+   #app {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,1fr); */
+
+        /* grid-template-areas: 
+        "A B B"
+        "A B B"
+        "A C D"; */
+
+        grid-template: 
+        "A B B" 80px
+        "A B B" 40px
+        "A C D" 50px / 80px 1fr 2fr;
+
+        gap: 30px;
+        /* row-gap: 30px; */
+        /* column-gap: 30px; */
+
+        height: 100vh;
+
+        padding: 30px;
+
+        box-sizing: border-box;
+    }
+
+    #app header {
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+        
+        /* 
+        grid-row-start: 1;
+        grid-row-end: 4; */
+
+        grid-area: A;
+    }
+
+    #app main {
+        /* grid-column: 2/4;
+        grid-row: 1/3; */
+
+        grid-area: B;
+    }
+
+    /* #app footer {
+        grid-area: footer;
+    } */
+</style>
+
+<div id="app">
+    <header>1</header>
+    <main>2</main>
+    <aside>3</aside>
+    <footer>4</footer>
+</div>
